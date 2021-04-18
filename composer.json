@@ -1,0 +1,62 @@
+{
+    "name": "dicr/yii2-yookassa",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "homepage": "https://gitlab.com/dicr/yii2-yookassa",
+    "description": "YooKassa API для Yii2",
+    "keywords": ["dicr", "yii2", "yookassa", "api", "client", "yandex", "kassa"],
+
+    "authors": [
+        {
+            "name": "Igor Tarasov",
+            "email": "develop@dicr.org",
+            "homepage": "http://dicr.org",
+            "role": "developer"
+        }
+    ],
+
+    "support": {
+        "source": "https://gitlab.com/dicr/yii2-yookassa.git"
+    },
+
+    "minimum-stability": "RC",
+    "prefer-stable": true,
+    "require": {
+        "php": "~7.4 || ~8.0.1",
+        "ext-curl": "*",
+
+        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2-httpclient": "~2.0",
+
+        "dicr/yii2-helper": "~4.5",
+        "dicr/yii2-validate": "~2.3",
+
+        "yoomoney/yookassa-sdk-php": "~2.0"
+
+    },
+
+    "autoload": {
+        "psr-4": {
+            "dicr\\yookassa\\": "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "dicr\\tests\\": "tests/"
+        }
+    },
+
+    "repositories": [
+        {"type": "composer", "url": "https://asset-packagist.org"},
+        {"type": "gitlab", "url": "https://gitlab.com/dicr/yii2-helper.git"},
+        {"type": "gitlab", "url": "https://gitlab.com/dicr/yii2-http.git"},
+        {"type": "gitlab", "url": "https://gitlab.com/dicr/yii2-json.git"},
+        {"type": "gitlab", "url": "https://gitlab.com/dicr/yii2-validate.git"}
+    ],
+
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.5"
+    }
+}
