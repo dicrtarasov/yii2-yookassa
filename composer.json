@@ -10,7 +10,7 @@
         {
             "name": "Igor Tarasov",
             "email": "develop@dicr.org",
-            "homepage": "http://dicr.org",
+            "homepage": "https://dicr.org",
             "role": "developer"
         }
     ],
@@ -22,17 +22,16 @@
     "minimum-stability": "RC",
     "prefer-stable": true,
     "require": {
-        "php": "~7.4 || ~8.0.1",
+        "php": "~8.0",
         "ext-curl": "*",
 
         "yiisoft/yii2": "~2.0",
         "yiisoft/yii2-httpclient": "~2.0",
 
-        "dicr/yii2-helper": "~4.5",
+        "dicr/yii2-helper": "~5.0",
         "dicr/yii2-validate": "~2.3",
 
-        "yoomoney/yookassa-sdk-php": "~2.0"
-
+        "yoomoney/yookassa-sdk-php": "~2.2"
     },
 
     "autoload": {

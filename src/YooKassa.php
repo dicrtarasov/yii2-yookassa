@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license proprietary
- * @version 18.04.21 12:13:50
+ * @version 26.12.21 22:23:45
  */
 
 declare(strict_types = 1);
@@ -23,19 +23,18 @@ use YooKassa\Client;
 class YooKassa extends Component
 {
     /** @var ?string авторизация через OAuth-токен */
-    public $token;
+    public ?string $token = null;
 
     /** @var ?string ID магазина (из личного кабинета) */
-    public $shopId;
+    public ?string $shopId = null;
 
     /** @var ?string секретный ключ (из личного кабинета) */
-    public $secretKey;
+    public ?string $secretKey = null;
 
     /** @var ?array конфиг клиента */
-    public $config;
+    public ?array $config = null;
 
-    /** @var Client */
-    private $_client;
+    private Client $_client;
 
     /**
      * Клиент YoKassa.
@@ -44,7 +43,7 @@ class YooKassa extends Component
      */
     public function getClient(): Client
     {
-        if ($this->_client === null) {
+        if (! isset($this->_client)) {
             $this->_client = new Client();
 
             if ($this->token !== null) {
