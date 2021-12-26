@@ -22,14 +22,9 @@
     "minimum-stability": "RC",
     "prefer-stable": true,
     "require": {
-        "php": "~8.0",
-        "ext-curl": "*",
+        "php": "~7.4 || ~8.0",
 
         "yiisoft/yii2": "~2.0",
-        "yiisoft/yii2-httpclient": "~2.0",
-
-        "dicr/yii2-helper": "~5.0",
-        "dicr/yii2-validate": "~2.3",
 
         "yoomoney/yookassa-sdk-php": "~2.2"
     },
